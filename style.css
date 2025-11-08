@@ -143,6 +143,35 @@ a:hover {
     color: #6c757d !important;
 }
 
+/* Fix for text readability in sections with bg-light (like pricing and review form) */
+section.bg-light h2,
+section.bg-light p.lead {
+    color: #212529 !important; /* Force dark gray text for light mode */
+}
+
+/* Override for dark mode: make text light on the darker bg-light background */
+[data-bs-theme="dark"] section.bg-light h2,
+[data-bs-theme="dark"] section.bg-light p.lead {
+    color: #dee2e6 !important; /* Force light gray text for dark mode */
+}
+
+/* --- FINAL FIX: Readability for specific bg-light sections (Pricing & Review Form) --- */
+/* Ensure headings and lead paragraphs are black on light backgrounds in light mode */
+#pricing-section h2,
+#pricing-section p.lead,
+#review-form-section h2,
+#review-form-section p.lead {
+    color: #000000 !important; /* Force black text for light mode */
+}
+
+/* Ensure headings and lead paragraphs are white on darker bg-light backgrounds in dark mode */
+[data-bs-theme="dark"] #pricing-section h2,
+[data-bs-theme="dark"] #pricing-section p.lead,
+[data-bs-theme="dark"] #review-form-section h2,
+[data-bs-theme="dark"] #review-form-section p.lead {
+    color: #010101 !important; /* Force white text for dark mode */
+}
+
 /* --- Styles for the HIGHLIGHTED "Pro" card --- */
 #pricing .card.border-primary {
     border-width: 2px;
@@ -266,6 +295,22 @@ a:hover {
 
 .rating-stars {
     color: #ffc107; /* Bootstrap's standard "warning" yellow for stars */
+}
+
+/* Style for interactive star rating */
+.rating-stars label {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #ffc107; /* Yellow for selected/hovered stars */
+}
+
+.rating-stars input:not(:checked) ~ label {
+    color: #ccc; /* Gray for unselected stars */
 }
 
 /* --- Modal Header Styling --- */
