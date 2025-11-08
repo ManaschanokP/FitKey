@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitKey - 24-hour Personal Trainer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NavBar -->
+    <!-- Removed bg-dark class -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#header">
+                <!-- Wrap the image in a span for styling -->
+                <span class="logo-container">
+                    <img src="FitKey-Logo-removebg-preview.png" alt="FitKey Logo" class="logo-image">
+                </span>
+                <!-- Add the brand name text next to the logo -->
+                <span class="logo-text">FitKey</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Added 'active' class and updated href -->
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Theme Switcher -->
+                <button class="btn nav-link" id="theme-switcher" type="button">
+                    <i class="bi bi-sun-fill sun-icon d-none"></i>
+                    <i class="bi bi-moon-stars-fill moon-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Header (Title) -->
+    <!-- Removed the py-5 class from here -->
+    <header id="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-4 fw-bold mb-3">Your Personal Trainer, Available 24/7</h1>
+                    <p class="lead mb-4">Book workout sessions, access custom meal plans, and connect with expert trainers anytime, anywhere.</p>
+                    <!-- Updated this button to be a Rickroll -->
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-primary btn-lg">Download The App</a>
+                    <!-- Updated this button -->
+                    <a href="#" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#signUpModal">Become a Member</a>
+                </div>
+                <!-- Removed the "header-image-col" class from this div -->
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <!-- This column is now empty -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Features -->
+    <section id="features" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Unlock Your Potential</h2>
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-md-4 mb-4">
+                    <!-- Removed text-primary class -->
+                    <i class="bi bi-calendar2-check display-4 mb-3"></i>
+                    <h3>Book Sessions Easily</h3>
+                    <p>Our intuitive system lets you book, reschedule, or cancel workout sessions with just a few clicks.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4 mb-4">
+                    <!-- Removed text-primary class -->
+                    <i class="bi bi-person-video3 display-4 mb-3"></i>
+                    <h3>Choose Your Trainer</h3>
+                    <p>Browse profiles, check expertise, and select the perfect personal trainer to guide your fitness journey.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4 mb-4">
+                    <!-- Removed text-primary class -->
+                    <i class="bi bi-file-text-fill display-4 mb-3"></i>
+                    <h3>Custom Meal Plans</h3>
+                    <p>Get access to personalized training programs and meal plans designed to help you reach your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Optional Section 1: Price List -->
+    <section id="pricing" class="py-5 bg-light">
+        <div class="container text-center">
+            <!-- Changed the title here -->
+            <h2 class="mb-5">Find the Perfect Plan</h2>
+            <div class="row">
+                <!-- Pricing Tier 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><h3>Starter</h3></div>
+                        <div class="card-body">
+                            <h4 class="card-title">990฿<span class="text-muted">/mo</span></h4>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Access to All Trainers</li>
+                                <li>Standard Meal Plans</li>
+                                <li>Email Support</li>
+                            </ul>
+                            <!-- Updated this button -->
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Choose This Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pricing Tier 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-header bg-primary text-white"><h3>Pro</h3></div>
+                        <div class="card-body">
+                            <h4 class="card-title">1990฿<span class="text-muted">/mo</span></h4>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>2 One-on-One Sessions</li>
+                                <li>Custom Meal Plans</li>
+                                <li>Priority Email Support</li>
+                            </ul>
+                            <!-- Updated this button -->
+                            <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Choose This Plan</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pricing Tier 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header"><h3>Ultimate</h3></div>
+                        <div class="card-body">
+                            <h4 class="card-title">$99<span class="text-muted">/mo</span></h4>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>Unlimited Sessions</li>
+                                <li>Weekly Dietician Check-ins</li>
+                                <li>24/7 Phone & Email Support</li>
+                            </ul>
+                            <!-- Updated this button -->
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signUpModal">Choose This Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New text block added below -->
+            <div class="mt-5">
+                <p class="lead">
+                    Ready to get started or need a custom enterprise plan? 
+                    <!-- Updated the links to be functional -->
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">Become a Member</a> or <a href="contact.html">Contact Us</a> for more information.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section id="testimonial" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Success Stories</h2>
+            <div class="row">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <img src="https://placehold.co/80x80/4F0E14/FFFFFF?text=AJ" class="rounded-circle mb-3" alt="Customer Alex Johnson">
+                            <p class="fst-italic">"FitKey completely changed my approach to fitness. My trainer is amazing, and the meal plans are easy to follow. I've never felt better!"</p>
+                            <footer class="blockquote-footer mt-3">
+                                <strong>Alex Johnson</strong><br>
+                                <cite title="Source Title">Pro Member</cite>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <img src="https://placehold.co/80x80/4F0E14/FFFFFF?text=MG" class="rounded-circle mb-3" alt="Customer Maria Garcia">
+                            <p class="fst-italic">"The facilities are always clean and the equipment is top-of-the-line. The 24/7 access is perfect for my unpredictable work schedule. It's a fantastic gym."</p>
+                            <footer class="blockquote-footer mt-3">
+                                <strong>Maria Garcia</strong><br>
+                                <cite title="Source Title">Annual Member</cite>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <img src="https://placehold.co/80x80/4F0E14/FFFFFF?text=DC" class="rounded-circle mb-3" alt="Customer David Chen">
+                            <p class="fst-italic">"I was intimidated by the idea of a personal trainer, but the team here is so welcoming and supportive. I've gained so much confidence and strength!"</p>
+                            <footer class="blockquote-footer mt-3">
+                                <strong>David Chen</strong><br>
+                                <cite title="Source Title">Premium Member</cite>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Call to Action (CTA) -->
+    <section id="cta" class="py-5 text-center text-white">
+        <div class="container">
+            <h2 class="display-5">Start your fitness journey with us →</h2>
+            <p class="lead my-4">Register today to get access to exclusive training programs and start achieving your goals.</p>
+            <!-- Updated this button -->
+            <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#signUpModal">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Sign-Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="signUpModalLabel">Create Your FitKey Account</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="modalName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="modalName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="modalEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modalPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="modalPassword" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Social Link (Footer) -->
+    <footer id="social" class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>Follow us on social media!</p>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
+            <p class="mt-3 mb-0">&copy; 2025 FitKey. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme Switcher Script -->
+    <script src="theme.js"></script>
+</body>
+</html>

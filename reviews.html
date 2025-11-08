@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - FitKey</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NavBar (Consistent with other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-container">
+                    <img src="FitKey-Logo-removebg-preview.png" alt="FitKey Logo" class="logo-image">
+                </span>
+                <span class="logo-text">FitKey</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Updated href for consistency -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <!-- Theme Switcher -->
+                <button class="btn nav-link" id="theme-switcher" type="button">
+                    <i class="bi bi-sun-fill sun-icon d-none"></i>
+                    <i class="bi bi-moon-stars-fill moon-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Page Title -->
+            <section class="text-center mb-5">
+                <h1 class="display-4">What Our Members Say</h1>
+                <p class="lead">Real stories from people who transformed their lives with FitKey.</p>
+            </section>
+
+            <!-- Review Summary -->
+            <section class="text-center mb-5 p-4 rounded bg-white-card">
+                <h2>Overall Rating</h2>
+                <div class="fs-2 rating-stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <p class="lead mt-2"><strong>4.8 out of 5 stars</strong> based on 150+ reviews</p>
+            </section>
+
+            <!-- Individual Reviews -->
+            <section class="mb-5" id="reviews-page">
+                <div class="row">
+                    <!-- Review 1 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"The trainers here are top-notch. They actually listen to your goals and create a plan that works. I've seen more progress in 3 months than I did in a year on my own."</p>
+                                    <footer class="blockquote-footer">Sarah J. <cite title="Source Title">Pro Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 2 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"Clean facilities, great equipment, and a friendly atmosphere. The booking app is a game-changer for my busy schedule. Highly recommend!"</p>
+                                    <footer class="blockquote-footer">Mike R. <cite title="Source Title">Annual Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 3 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"I was nervous about joining a gym, but the community here is so supportive. The nutrition plan that came with my package was surprisingly delicious and easy to follow."</p>
+                                    <footer class="blockquote-footer">Emily C. <cite title="Source Title">Premium Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 4 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"The variety of classes is amazing. From HIIT to Yoga, there's always something new to try. It keeps my routine fresh and exciting."</p>
+                                    <footer class="blockquote-footer">David L. <cite title="Source Title">Monthly Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 5 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"As someone with a busy travel schedule, the online coaching has been a lifesaver. My trainer keeps me accountable and on track, no matter where I am."</p>
+                                    <footer class="blockquote-footer">Jessica P. <cite title="Source Title">VIP Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 6 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"Great value for money. The annual plan is a steal for the quality of service and facilities you get. Best investment I've made in my health."</p>
+                                    <footer class="blockquote-footer">Tom H. <cite title="Source Title">Annual Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 7 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"I use the daily pass when I'm in town for work. The process is super easy through the app, and the gym has everything I need for a solid workout. It's incredibly convenient."</p>
+                                    <footer class="blockquote-footer">Kevin W. <cite title="Source Title">Daily Pass User</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 8 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"The personal training sessions are worth every penny. My trainer is knowledgeable and pushes me to be my best. The progress I've made is unbelievable."</p>
+                                    <footer class="blockquote-footer">Olivia B. <cite title="Source Title">Pro Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review 9 -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>"Just a great, no-fuss gym. It's never overly crowded, the equipment is well-maintained, and the staff are always friendly. Exactly what I was looking for."</p>
+                                    <footer class="blockquote-footer">Daniel K. <cite title="Source Title">Monthly Member</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- A Look Inside -->
+            <section>
+                <h2 class="text-center mb-4">A Look Inside Our Gym</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <img src="https://placehold.co/600x400/fdf5f6/4F0E14?text=Weight+Area" class="img-fluid rounded shadow" alt="Weight training area">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://placehold.co/600x400/fdf5f6/4F0E14?text=Cardio+Zone" class="img-fluid rounded shadow" alt="Cardio machines">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://placehold.co/600x400/fdf5f6/4F0E14?text=Yoga+Studio" class="img-fluid rounded shadow" alt="Yoga and group class studio">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent with other pages) -->
+    <footer id="social" class="py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>Follow us on social media!</p>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
+            <p class="mt-3 mb-0">&copy; 2025 FitKey. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme Switcher Script -->
+    <script src="theme.js"></script>
+</body>
+</html>

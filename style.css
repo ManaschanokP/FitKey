@@ -1,0 +1,291 @@
+/* --- Custom Red Theme & General Styles --- */
+:root {
+    --bs-primary: #f21010; /* New Sporty Red */
+    --bs-dark: #4F0E14;    /* Dark Crimson Red */
+    /* Removed redundant custom variables */
+}
+
+html {
+    scroll-padding-top: 70px; /* Offset for sticky navbar when jumping to sections */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bs-body-bg); /* Use Bootstrap's variable for theme compatibility */
+    color: var(--bs-body-color); /* Use Bootstrap's variable for theme compatibility */
+}
+
+section, header {
+    padding: 4rem 0;
+}
+
+a {
+    color: var(--bs-primary);
+}
+
+a:hover {
+    color: #d90e0e; /* A slightly darker red for hover */
+}
+
+/* --- Components with Dark Background --- */
+/* This rule now only applies to #social */
+#social {
+    background-color: var(--bs-dark) !important; /* Override Bootstrap's bg-dark */
+}
+
+/* Apply the background image to the entire header with an overlay */
+#header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 0; /* Increased padding to make the section taller */
+}
+
+/* --- Navbar Styling (with Transparency) --- */
+.navbar {
+    /* Changed to transparent version of --bs-primary (#f21010) */
+    background-color: rgba(242, 16, 16, 0.85); /* Bright Red at 85% opacity */
+    backdrop-filter: blur(10px); /* This creates the modern "frosted glass" effect */
+    border-bottom: 2px solid var(--bs-primary);
+}
+
+/* Dark mode override for the navbar */
+[data-bs-theme="dark"] .navbar {
+    background-color: rgba(20, 20, 20, 0.75); /* Dark, semi-transparent background */
+}
+
+/* Align the logo and text */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Creates space between the logo and the text */
+}
+
+/* Make navbar links more readable with a text shadow */
+.navbar-nav .nav-link {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle dark shadow */
+}
+
+/* --- New Logo Styles (Corrected) --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;  /* Increased diameter of the circle */
+    height: 50px; /* Increased diameter of the circle */
+    background-color: #ffffff; /* CHANGED to white to make the logo text visible */
+    border-radius: 50%; /* This makes the container a circle */
+    padding: 7px; /* Adjusted padding for the new size */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+/* Dark mode override for the logo background */
+[data-bs-theme="dark"] .logo-container {
+    background-color: var(--bs-tertiary-bg);
+}
+
+/* Style for the new logo text */
+.logo-text {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--bs-white);
+}
+
+.logo-image {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Fix for header text visibility */
+#header h1,
+#header p {
+    color: var(--bs-white); /* Make header text white */
+    /* Removed text-shadow for a cleaner look */
+}
+
+/* --- Features Section Icon Color --- */
+#features .bi {
+    color: var(--bs-primary); /* This makes the icons red */
+}
+
+#pricing .card {
+    background-color: var(--bs-card-bg); /* Use Bootstrap variable */
+    border: 1px solid var(--bs-border-color); /* Use Bootstrap variable */
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+#pricing .card:hover {
+    transform: translateY(-5px); /* Add a subtle lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Style for the card headers (e.g., "Starter", "Ultimate") */
+#pricing .card-header {
+    background-color: transparent;
+    /* color: var(--bs-dark); */ /* This is now handled by Bootstrap */
+    border-bottom: 1px solid var(--bs-border-color-translucent); /* Use Bootstrap variable */
+}
+
+/* This block is no longer needed as Bootstrap's theme handles it */
+/*
+#pricing .card-body,
+#pricing .card-body h4,
+#pricing .card-body ul,
+#pricing .card-body li {
+    color: var(--bs-text-dark) !important;
+}
+*/
+
+/* Style the '/mo' text to be a lighter gray */
+#pricing .card-body .text-muted {
+    color: #6c757d !important;
+}
+
+/* --- Styles for the HIGHLIGHTED "Pro" card --- */
+#pricing .card.border-primary {
+    border-width: 2px;
+    border-color: var(--bs-primary) !important;
+}
+
+#pricing .card.border-primary .card-header {
+    background-color: var(--bs-primary) !important;
+    color: var(--bs-white) !important; /* White text for "Pro" */
+    border-bottom: none;
+}
+
+/* --- Call to Action Section --- */
+#cta {
+    background: linear-gradient(45deg, var(--bs-primary), #c80c0c);
+}
+
+/* Pulsing animation for the main CTA button */
+#cta .btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* --- Testimonial Section --- */
+#testimonial .card,
+#reviews-page .card {
+    border: none; /* Remove default card border */
+    background-color: var(--bs-card-bg); /* Use Bootstrap variable for theme compatibility */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#testimonial .card:hover,
+#reviews-page .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+#testimonial .card-body,
+#reviews-page .card-body {
+    padding: 2rem;
+}
+
+#testimonial img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 3px solid var(--bs-primary);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #d90e0e;
+    border-color: #d90e0e;
+}
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+}
+
+.btn-outline-light {
+    color: var(--bs-white);
+    border-color: var(--bs-white);
+}
+.btn-outline-light:hover {
+    background-color: var(--bs-white);
+    color: var(--bs-dark);
+}
+
+/* --- Team Members Page (about.html) --- */
+.team-member-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.team-member-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.team-photo {
+    /* Define a fixed square size for the photo frame */
+    width: 180px;
+    height: 180px;
+    /* Change from circle to a square with rounded corners */
+    border-radius: 0.5rem;
+    /* This is the key: it scales the image to fill the frame and crops the excess, preventing distortion */
+    object-fit: cover;
+    /* Center the image within the frame */
+    object-position: center;
+    /* Add some spacing and a border */
+    margin: 1.5rem auto 1rem auto;
+    border: 4px solid var(--bs-primary);
+}
+
+/* --- Custom Component Styles --- */
+.bg-white-card {
+    background-color: var(--bs-card-bg); /* Use Bootstrap variable for theme compatibility */
+}
+
+.rating-stars {
+    color: #ffc107; /* Bootstrap's standard "warning" yellow for stars */
+}
+
+/* --- Modal Header Styling --- */
+.modal-header.bg-primary .modal-title {
+    color: var(--bs-white);
+}
+
+/* --- Theme Switcher Icon Color --- */
+#theme-switcher {
+    color: var(--bs-navbar-color);
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#theme-switcher:hover {
+    color: var(--bs-navbar-hover-color);
+}
+
+/* --- Dark Mode Map Filter --- */
+[data-bs-theme="dark"] iframe {
+    filter: invert(100%) hue-rotate(180deg);
+}
